@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 export default function Home() {
+  document.title = "Home | GlaucoDetect";
   return (
     <Container id='home'>
       <Row>
