@@ -1,4 +1,4 @@
-import { Nav, Navbar, Container } from "react-bootstrap";
+import { Nav, Navbar, Container, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import './style.css';
 
@@ -18,15 +18,17 @@ export default function Header() {
             <Nav.Link href='/'>
               <NavLink to='/'>Home</NavLink>
             </Nav.Link>
-            <Nav.Link href='/predict'>
-              <NavLink to='/predict' className={""}>Predict</NavLink>
-            </Nav.Link>
             <Nav.Link href='/about'>
               <NavLink to='/about'>About</NavLink>
             </Nav.Link>
             <Nav.Link href='/contact'>
               <NavLink to='/contact'>Contact Us</NavLink>
             </Nav.Link>
+          </Nav>
+          <Nav >
+            <Button>
+              <NavLink to='/predict'>Predict</NavLink>
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
