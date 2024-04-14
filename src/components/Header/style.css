@@ -1,0 +1,9 @@
+
+a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.55);
+	transition: color 0.3s ease-in-out;
+}
+a:hover {
+	color: rgba(255, 255, 255, 0.80);
+}
