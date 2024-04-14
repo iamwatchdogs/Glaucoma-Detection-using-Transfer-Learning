@@ -1,12 +1,13 @@
-import Header from "./components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import Header from "./components/Header/Header";
+import { Outlet } from "react-router-dom";
+
+export default function App() {
   return (
     <>
       <Header />
+      <Outlet />
     </>
   );
 }
-
-export default App;
