@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from skimage.transform import resize
 
 
-def preprocess_image(image_path, target_size):
+def preprocess_image(image_path, target_size=(150, 150)):
     image = load_img(image_path)
     image = img_to_array(image)
     image = image / 255.0
