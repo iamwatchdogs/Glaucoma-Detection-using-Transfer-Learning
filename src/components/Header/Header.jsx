@@ -1,8 +1,9 @@
 import { Nav, Navbar, Container, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import './style.css';
+import { NavLink, useLocation } from "react-router-dom";
+import "./style.css";
 
 export default function Header() {
+  const location = useLocation();
   return (
     <Navbar
       expand='lg'
@@ -25,11 +26,13 @@ export default function Header() {
               <NavLink to='/contact'>Contact Us</NavLink>
             </Nav.Link>
           </Nav>
-          <Nav>
-            <Button>
-              <NavLink to='/predict'>Predict</NavLink>
-            </Button>
-          </Nav>
+          {location.pathname !== '/' && location.pathname !== '/predict' && (
+            <Nav>
+              <Button>
+                <NavLink to='/predict'>Check your eye</NavLink>
+              </Button>
+            </Nav>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>
