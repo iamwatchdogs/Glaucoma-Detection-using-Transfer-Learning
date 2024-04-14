@@ -11,7 +11,7 @@ export default function Header() {
       data-bs-theme='dark'
     >
       <Container>
-        <Navbar.Brand href='/'>Glaucoma Detection</Navbar.Brand>
+        <Navbar.Brand href='/'>GlaucoDetect</Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto' defaultActiveKey={"/"}>
@@ -25,7 +25,7 @@ export default function Header() {
               <NavLink to='/contact'>Contact Us</NavLink>
             </Nav.Link>
           </Nav>
-          <Nav >
+          <Nav>
             <Button>
               <NavLink to='/predict'>Predict</NavLink>
             </Button>
