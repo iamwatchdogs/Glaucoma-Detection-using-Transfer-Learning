@@ -50,3 +50,6 @@ main {
 #img:hover {
 	transform: scale(1.1);
 }
+#predict-button{
+  width: 100%;
+}

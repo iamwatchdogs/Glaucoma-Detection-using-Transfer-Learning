@@ -16,21 +16,31 @@ export default function Header() {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto' defaultActiveKey={"/"}>
-            <Nav.Link href='/'>
-              <NavLink to='/'>Home</NavLink>
-            </Nav.Link>
-            <Nav.Link href='/about'>
-              <NavLink to='/about'>About</NavLink>
-            </Nav.Link>
-            <Nav.Link href='/contact'>
-              <NavLink to='/contact'>Contact Us</NavLink>
-            </Nav.Link>
+            <NavLink to='/' role='button' className='nav-link' tabIndex='0'>
+              Home
+            </NavLink>
+            <NavLink
+              to='/about'
+              role='button'
+              className='nav-link'
+              tabIndex='1'
+            >
+              About
+            </NavLink>
+            <NavLink
+              to='/contact'
+              role='button'
+              className='nav-link'
+              tabIndex='2'
+            >
+              Contact Us
+            </NavLink>
           </Nav>
-          {location.pathname !== '/' && location.pathname !== '/predict' && (
+          {location.pathname !== "/" && location.pathname !== "/predict" && (
             <Nav>
-              <Button>
-                <NavLink to='/predict'>Check your eye</NavLink>
-              </Button>
+              <NavLink to='/predict' role='button' tabIndex='3'>
+                <Button>Check your eye</Button>
+              </NavLink>
             </Nav>
           )}
         </Navbar.Collapse>

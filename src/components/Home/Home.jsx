@@ -21,9 +21,11 @@ export default function Home() {
             fast even without consulting a doctor. Check your eye for free
             today, {"'"}cause A stitch in time saves nine.
           </p>
-          <Button>
-            <Link to='/predict'>Check you eye</Link>
-          </Button>
+          <Link to='/predict'>
+            <Button id="predict-button">
+              Check you eye
+            </Button>
+          </Link>
         </Col>
         <Col id='img'></Col>
       </Row>
