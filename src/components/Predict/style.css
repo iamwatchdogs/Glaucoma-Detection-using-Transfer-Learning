@@ -1,0 +1,36 @@
+main {
+  height: 95vh;
+  background-image: linear-gradient(
+    140deg,
+    #eadedb 0%,
+    #fb6d7a 25%,
+    #bc70a4 50%,
+    #eff5d0 75%,
+    #0f7394
+  );
+}
+#main {
+  height: 90vh;
+  display: grid;
+  color: whitesmoke;
+}
+#main h1 {
+  text-shadow: black 1px 0 10px;
+}
+#main > * {
+  align-self: center;
+}
+.row > .col {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 18px;
+}
+#form {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 25px;
+}
+form button {
+  margin-top: 15px;
+  height: 75%;
+}
