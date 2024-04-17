@@ -1,7 +1,8 @@
 import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 
-export default function FormComponent() {
+/* eslint-disable react/prop-types */
+export default function FormComponent({ setResult }) {
   const [formData, setFormData] = useState({
     ExpCDR: "",
     EyeType: "0",
@@ -44,6 +45,7 @@ export default function FormComponent() {
     if (res.status === 200) {
       const data = await res.json();
       console.log(data);
+      setResult(data["prediction"]);
     } else {
       throw new Error("Failed to fetch");
     }
