@@ -51,9 +51,9 @@ export default function FormComponent({ setResult }) {
     }
   }
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form id="form" onSubmit={handleSubmit}>
       <Form.Group controlId='ExpCDR'>
-        <Form.Label>Enter Exp CDR Value</Form.Label>
+        <Form.Label>Enter the Exp CDR Value:</Form.Label>
         <Form.Control
           type='text'
           name='ExpCDR'
@@ -65,7 +65,7 @@ export default function FormComponent({ setResult }) {
       </Form.Group>
 
       <Form.Group controlId='EyeType'>
-        <Form.Label>Eye Type</Form.Label>
+        <Form.Label>Select the Eye Type:</Form.Label>
         <Form.Control
           as='select'
           name='EyeType'
@@ -74,12 +74,12 @@ export default function FormComponent({ setResult }) {
           required
         >
           <option value='0'>OD</option>
-          <option value='1'>OOS</option>
+          <option value='1'>OS</option>
         </Form.Control>
       </Form.Group>
 
       <Form.Group controlId='EyeSet'>
-        <Form.Label>EyeSet</Form.Label>
+        <Form.Label>Select the Eye Set:</Form.Label>
         <Form.Control
           as='select'
           name='EyeSet'
@@ -93,7 +93,7 @@ export default function FormComponent({ setResult }) {
       </Form.Group>
 
       <Form.Group controlId='ImgFile'>
-        <Form.Label>ImgFile</Form.Label>
+        <Form.Label>Upload the respetive scanned image file:</Form.Label>
         <Form.Control
           type='file'
           name='ImgFile'
