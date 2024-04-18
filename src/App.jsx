@@ -5,21 +5,23 @@ import { Outlet, useLocation } from "react-router-dom";
 
 export default function App() {
   const location = useLocation();
-  const darkStyling = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.10)),
+  const backgroundImage =
+    location.pathname === "/" ? {} :
+    `linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.06)),
     linear-gradient(
-      140deg,
-      #eadedb 0%,
-      #fb6d7a 25%,
-      #bc70a4 50%,
-      #eff5d0 75%,
-      #0f7394
-    )`;
+    140deg,
+    #eadedb 0%,
+    #fb6d7a 25%,
+    #bc70a4 50%,
+    #bfd641 75%,
+    #0f7394
+  )`;
   return (
     <>
       <header>
         <Header />
       </header>
-      <main style={location.pathname === '/' ? {} : {backgroundImage: darkStyling}}>
+      <main style={{ backgroundImage }}>
         <Outlet />
       </main>
     </>

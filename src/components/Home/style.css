@@ -10,6 +10,8 @@ main {
     #bfd641 75%,
     #0f7394
   );
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
 }
 #home {
   display: flex;

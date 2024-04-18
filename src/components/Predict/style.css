@@ -1,14 +1,3 @@
-main {
-  height: 95vh;
-  background-image: linear-gradient(
-    140deg,
-    #eadedb 0%,
-    #fb6d7a 25%,
-    #bc70a4 50%,
-    #eff5d0 75%,
-    #0f7394
-  );
-}
 #main {
   height: 90vh;
   display: grid;
@@ -30,7 +19,7 @@ main {
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 25px;
 }
-form button {
+form > button {
   margin-top: 15px;
   height: 75%;
 }
