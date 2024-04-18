@@ -2,6 +2,7 @@
   height: 90vh;
   display: grid;
   color: whitesmoke;
+  font-size: large;
 }
 #main h1 {
   text-shadow: black 1px 0 10px;
@@ -9,10 +10,15 @@
 #main > * {
   align-self: center;
 }
+.row {
+  gap: 5vw;
+}
 .row > .col {
   display: grid;
+  align-self: center;;
   grid-template-rows: repeat(1, 1fr);
   gap: 18px;
+
 }
 #form {
   display: grid;
@@ -22,4 +28,14 @@
 form > button {
   margin-top: 15px;
   height: 75%;
+}
+img {
+  width: 75%;
+}
+#display-results > img{
+  margin: auto;
+  margin-bottom: 25px;
+}
+#display-results > p{
+  font-size:x-large;
 }
