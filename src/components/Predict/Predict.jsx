@@ -8,16 +8,17 @@ import safe from "../../assets/img/safe.png";
 import warning from "../../assets/img/warning.png";
 import danger from "../../assets/img/danger.png";
 import detection from "../../assets/img/detection.png";
+import loading from "../../assets/img/loading.png";
 
 // https://pubmed.ncbi.nlm.nih.gov/21095735/
 // eslint-disable-next-line react/prop-types
-function RenderResult({ result }) {
-  if (!result || isNaN(result))
+function RenderResult({ result, isLoading }) {
+  if (!result || isNaN(result)) {
+    if (isLoading) return <img src={loading} alt="loading" id="loader"/>;
     return (
-      <>
-        <img src={detection} alt='detection image' style={{width:"100%"}}/>
-      </>
+      <img src={detection} alt='detection image' style={{ width: "100%" }} />
     );
+  }
   let img, description;
   const floatResult = parseFloat(result);
 
@@ -45,7 +46,7 @@ function RenderResult({ result }) {
         Status: <b>{img.name}</b>
       </h2>
       <h2>
-        Probability of Glaucoma: <b>{Math.round(floatResult*1000)/10}%</b>
+        Probability of Glaucoma: <b>{Math.round(floatResult * 1000) / 10}%</b>
       </h2>
       <p>{description}</p>
     </>
@@ -54,6 +55,7 @@ function RenderResult({ result }) {
 
 export default function Predict() {
   const [result, setResult] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <Container id='main'>
       <Row>
@@ -67,10 +69,10 @@ export default function Predict() {
             (Usual given along with retainal scan, they{"'"}re just group
             assiged based on Intraocular Pressure (IOP) & Corneal Thickness).
           </p>
-          <FormComponent setResult={setResult} />
+          <FormComponent {...{ setResult, setIsLoading }} />
         </Col>
-        <Col id="display-results">
-          <RenderResult result={result} />
+        <Col id='display-results'>
+          <RenderResult result={result} isLoading={isLoading} />
         </Col>
       </Row>
     </Container>

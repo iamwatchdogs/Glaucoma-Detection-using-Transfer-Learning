@@ -2,7 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 
 /* eslint-disable react/prop-types */
-export default function FormComponent({ setResult }) {
+export default function FormComponent({ setResult, setIsLoading }) {
   const [formData, setFormData] = useState({
     ExpCDR: "",
     EyeType: "0",
@@ -20,6 +20,7 @@ export default function FormComponent({ setResult }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
       const formDataToSend = new FormData();
@@ -51,7 +52,7 @@ export default function FormComponent({ setResult }) {
     }
   }
   return (
-    <Form id="form" onSubmit={handleSubmit}>
+    <Form id='form' onSubmit={handleSubmit}>
       <Form.Group controlId='ExpCDR'>
         <Form.Label>Enter the Exp CDR Value:</Form.Label>
         <Form.Control
