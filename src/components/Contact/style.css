@@ -4,8 +4,8 @@
   top: 10vh;
   padding: max(3vw, 3vh);
   border-radius: 25px;
-  border: 5px solid black;
-  background-color: whitesmoke;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 #contact-block > * {
   height: 100%;
@@ -30,17 +30,11 @@
   border: 5px solid black;
   background-color: whitesmoke;
 }
-#mit-license{
-  color: black;
-}
-#mit-license:hover {
-  color:brown;
-}
 #contact-preview-anchor{
   border-radius: 25px;
   transition: box-shadow 0.75s ease-in-out, transform 0.5s ease-in-out;
 }
 #contact-preview-anchor:hover{
-  box-shadow: 0 0 25px rgba(0, 0, 0);
+  box-shadow: 0 0 45px whitesmoke;
   transform: scale(1.05);
 }
