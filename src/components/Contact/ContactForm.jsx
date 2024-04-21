@@ -2,7 +2,7 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-export default function ContactForm({ setHasSubmitted, setHasError }) {
+export default function ContactForm({ setHasSubmitted, setHasError, setIsLoading }) {
   const [contactDetails, setContactDetails] = useState({
     name: null,
     email: null,
@@ -29,6 +29,7 @@ export default function ContactForm({ setHasSubmitted, setHasError }) {
     };
 
     const res = await fetch(URL, options);
+    setIsLoading(false);
     if (res.status === 200) {
       const data = await res.json();
       console.log(data);
@@ -41,8 +42,10 @@ export default function ContactForm({ setHasSubmitted, setHasError }) {
 
   return (
     <Form
+    id="contact-form"
       onSubmit={(e) => {
         e.preventDefault();
+        setIsLoading(true);
         handleSubmit(contactDetails);
       }}
     >
@@ -83,7 +86,7 @@ export default function ContactForm({ setHasSubmitted, setHasError }) {
         </Form.Group>
       </Row>
 
-      <Row className='m-auto'>
+      <Row className='p-3'>
         <Button id='contact-submit' type='submit' className='w-100'>
           Submit
         </Button>
