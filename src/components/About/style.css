@@ -1,0 +1,21 @@
+#about {
+	position: relative !important;
+	height: 90vh;
+	top: 2vh;
+	padding: 1vh 0;
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+#about h1 {
+	font-size: 2.5em;
+}
+.about-img {
+	width: 80%;
+	max-height: 300px;
+	margin: auto;
+	border-radius: 25px;
+	box-shadow: 1px 2px 50px rgba(0, 0, 0, 0.433);
+}
