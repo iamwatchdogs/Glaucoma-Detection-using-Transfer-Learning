@@ -36,7 +36,7 @@ export default function FormComponent({ setResult, setIsLoading }) {
   }
 
   async function handleRequest(formDataToSend) {
-    const URL = "http://127.0.0.1:5000/classify";
+    const URL = import.meta.env.VITE_DEV_BACKEND_ENDPOINT;
     const options = {
       method: "POST",
       body: formDataToSend,
