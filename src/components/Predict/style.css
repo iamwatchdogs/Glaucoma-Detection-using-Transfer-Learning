@@ -25,7 +25,7 @@
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 25px;
 }
-form > button {
+#form > button {
   margin-top: 15px;
   height: 75%;
 }
@@ -37,7 +37,7 @@ img {
   margin-bottom: 25px;
 }
 #display-results > p{
-  font-size:x-large;
+  font-size: x-large;
 }
 
 /* Loading animation */
